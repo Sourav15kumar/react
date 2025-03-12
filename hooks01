@@ -1,0 +1,35 @@
+// usestate use
+import {useState} from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  let [counter,setcounter] = useState(65);   //counter is variable , setcounter is function
+  //let counter=82;
+  let addvalue = ()=>{
+    
+    console.log("value added",counter);
+    //counter=counter+1;
+   setcounter(counter+1);
+  }
+
+  let removevalue=()=>{
+    setcounter(counter-1);
+  }
+
+  return (
+    <>
+     <h1>sourav</h1>
+     <h2>counter value: {counter}</h2>
+     <button 
+     onClick={addvalue}
+     >add</button>
+     <br />
+     <button 
+     onClick={removevalue}>remove {counter}</button>
+    </>
+  )
+}
+
+export default App
